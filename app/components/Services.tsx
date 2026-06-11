@@ -54,7 +54,7 @@ export default function Services({ services }: { services?: any[] }) {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {displayServices.map((service, index) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-md card-hover">
               <div className="text-5xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>

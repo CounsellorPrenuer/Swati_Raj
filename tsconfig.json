@@ -16,7 +16,6 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "ignoreDeprecations": "6.0",
     "jsx": "preserve",
     "strict": true,
     "noUnusedLocals": true,
@@ -45,6 +44,9 @@
   "exclude": [
     "node_modules",
     "dist",
-    ".next"
+    ".next",
+    "sanity",
+    "scripts",
+    "sanity.config.ts"
   ]
 }
