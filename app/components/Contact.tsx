@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export default function Contact({ siteSettings }: { siteSettings?: any }) {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,34 +30,32 @@ export default function Contact({ siteSettings }: { siteSettings?: any }) {
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold text-sm uppercase">Get in Touch</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6">Contact Us</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Ready to start your journey? Reach out to us for a free consultation
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+            Not sure where to start? A single conversation can bring clarity.
           </p>
+          <button className="btn-primary mb-8 text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all">Book a Free Discovery Call →</button>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Contact Info Card 1 */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl text-center">
             <div className="text-4xl mb-4">📧</div>
             <h3 className="text-lg font-semibold mb-2">Email</h3>
-            <p className="text-gray-700">{siteSettings?.email || 'swatiraj72@gmail.com'}</p>
             <p className="text-gray-700">swatiswain@yahoo.com</p>
           </div>
 
           {/* Contact Info Card 2 */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-            <div className="text-4xl mb-4">📱</div>
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl text-center">
+            <div className="text-4xl mb-4">📞</div>
             <h3 className="text-lg font-semibold mb-2">Phone</h3>
-            <p className="text-gray-700">{siteSettings?.phone || '+91 6583672097'}</p>
-            <p className="text-gray-700">+91 9848083431</p>
+            <p className="text-gray-700">+65 8367 2097</p>
           </div>
 
           {/* Contact Info Card 3 */}
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-            <div className="text-4xl mb-4">🔗</div>
-            <h3 className="text-lg font-semibold mb-2">Connect</h3>
-            <p><a href="http://www.linkedin.com/in/swati-raj26" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a></p>
-            <p className="text-gray-700 text-sm mt-2">Find Your Way • Career Guidance</p>
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl text-center">
+            <div className="text-4xl mb-4">📍</div>
+            <h3 className="text-lg font-semibold mb-2">Location</h3>
+            <p className="text-gray-700">Singapore | Virtual sessions available</p>
           </div>
         </div>
 

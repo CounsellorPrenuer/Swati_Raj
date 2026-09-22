@@ -24,7 +24,7 @@ export default async function Home() {
       <Services services={services} />
       <Packages packages={packages} />
       <Testimonials testimonials={testimonials} />
-      <Contact siteSettings={siteSettings} />
+      <Contact />
     </main>
   )
 }

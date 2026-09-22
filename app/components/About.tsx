@@ -35,8 +35,8 @@ export default function About({ founder }: { founder?: any }) {
 
           {/* Right - Content */}
           <div>
-            <span className="text-blue-600 font-semibold text-sm uppercase">Meet the Founder</span>
-            <h2 className="text-4xl font-bold mt-2 mb-6">{founderName}</h2>
+            <span className="text-blue-600 font-semibold text-sm uppercase">About Swapath — and About Me</span>
+            <h2 className="text-4xl font-bold mt-2 mb-6">Meet {founderName}</h2>
             <p className="text-lg text-gray-700 font-semibold mb-6">{founderHeadline}</p>
 
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -50,7 +50,7 @@ export default function About({ founder }: { founder?: any }) {
             <div className="space-y-4 mb-8 mt-8">
               {credentials.length > 0 ? credentials.map((cred: any, idx: number) => (
                 <div key={idx} className="flex items-start gap-4">
-                  <div className="text-3xl">{cred.icon === "award" ? "🏆" : cred.icon === "briefcase" ? "💼" : "📚"}</div>
+                  <div className="text-3xl">{cred.icon === "award" ? "🏅" : cred.icon === "briefcase" ? "💼" : "📚"}</div>
                   <div>
                     <h4 className="font-semibold text-gray-900">{cred.title}</h4>
                   </div>
@@ -75,7 +75,8 @@ export default function About({ founder }: { founder?: any }) {
               )}
             </div>
 
-            <button className="btn-primary">Schedule a Consultation</button>
+            <p className="text-gray-700 font-semibold mb-6">If your child is standing at a crossroads — unsure about a stream, a subject, or what comes next — I'd love to help them find their way.</p>
+            <button className="btn-primary">Book a Free Discovery Call →</button>
           </div>
         </div>
       </div>
