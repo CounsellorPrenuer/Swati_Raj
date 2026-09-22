@@ -3,11 +3,9 @@
 import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.client'
 
-export default function Hero({ founder }: { siteSettings?: any; founder?: any }) {
+export default function Hero({ siteSettings }: { siteSettings?: any }) {
   const headlineParts = ['Helping Students Find Their Way', '— One Clear Decision at a Time']
   const description = 'Certified career counseling for students in classes 8–12, guiding them from confusion to clarity in choosing subjects, streams, and career paths.'
-  const founderName = founder?.name || 'Swati Raj'
-  const founderHeadline = founder?.headline || 'Career & Admission Guidance Specialist'
 
   return (
     <section className="bg-gradient-to-br from-blue-50 to-purple-50 pt-20 pb-32">
@@ -41,22 +39,20 @@ export default function Hero({ founder }: { siteSettings?: any; founder?: any })
             </div>
           </div>
 
-          {/* Right Side - Image Placeholder */}
+          {/* Right Side - Logo */}
           <div className="hidden md:flex items-center justify-center">
-            <div className="w-full h-96 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden p-4">
-              {founder?.image ? (
+            <div className="w-full h-96 flex items-center justify-center p-4">
+              {siteSettings?.logo ? (
                 <Image
-                  src={urlFor(founder.image).width(700).height(700).url()}
-                  alt={founderName}
-                  width={700}
-                  height={700}
-                  className="h-full w-full object-contain"
+                  src={urlFor(siteSettings.logo).width(800).url()}
+                  alt="SWAPATH Logo"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto max-w-md object-contain"
                 />
               ) : (
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👩‍🏫</div>
-                  <p className="text-gray-700 font-semibold">{founderName}</p>
-                  <p className="text-gray-600 text-sm">{founderHeadline}</p>
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl font-bold text-gradient">SWAPATH</div>
                 </div>
               )}
             </div>

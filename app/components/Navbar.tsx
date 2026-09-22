@@ -10,7 +10,7 @@ export default function Navbar({ siteSettings }: { siteSettings?: any }) {
 
   const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'About Founder', href: '#about' },
+    { label: 'About Founder', href: '/about' },
     { label: 'Services', href: '#services' },
     { label: 'Packages', href: '#packages' },
     { label: 'Testimonials', href: '#testimonials' },
