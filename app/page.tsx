@@ -1,15 +1,16 @@
 import Hero from './components/Hero'
 import Welcome from './components/Welcome'
+import About from './components/About'
 import Services from './components/Services'
 import Packages from './components/Packages'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
-import {getPackages, getServices, getSiteSettings, getTestimonials} from '@/lib/sanity.client'
+import {getFounder, getPackages, getServices, getSiteSettings, getTestimonials} from '@/lib/sanity.client'
 
 export default async function Home() {
-  const [siteSettings, services, packages, testimonials] = await Promise.all([
+  const [siteSettings, founder, services, packages, testimonials] = await Promise.all([
     getSiteSettings(),
-    
+    getFounder(),
     getServices(),
     getPackages(),
     getTestimonials(),
@@ -17,8 +18,9 @@ export default async function Home() {
 
   return (
     <main>
-      <Hero siteSettings={siteSettings} />
+      <Hero siteSettings={siteSettings} founder={founder} />
       <Welcome />
+      <About founder={founder} />
       <Services services={services} />
       <Packages packages={packages} />
       <Testimonials testimonials={testimonials} />

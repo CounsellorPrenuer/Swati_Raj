@@ -276,15 +276,7 @@ I work closely with both students and parents, because I've seen — from the Vi
   await client.createOrReplace(siteSettings)
   await client.createOrReplace(founder)
   
-  // delete existing services, packages, testimonials to avoid mixing
-  const existingServices = await client.fetch('*[_type == "service"]')
-  for (const s of existingServices) await client.delete(s._id)
   
-  const existingPackages = await client.fetch('*[_type == "package"]')
-  for (const p of existingPackages) await client.delete(p._id)
-  
-  const existingTestimonials = await client.fetch('*[_type == "testimonial"]')
-  for (const t of existingTestimonials) await client.delete(t._id)
 
   await Promise.all(services.map(s => client.createOrReplace(s)))
   await Promise.all(packages.map(p => client.createOrReplace(p)))
@@ -297,3 +289,4 @@ main().catch(err => {
   console.error(err)
   process.exit(1)
 })
+
