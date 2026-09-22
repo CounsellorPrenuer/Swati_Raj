@@ -10,11 +10,11 @@ export default function Navbar({ siteSettings }: { siteSettings?: any }) {
 
   const menuItems = [
     { label: 'Home', href: '/' },
-    { label: 'About Founder', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Packages', href: '#packages' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact Us', href: '#contact' },
+    { label: 'About', href: '/about' },
+    { label: 'Why Swapath', href: '/#services' },
+    { label: 'Process', href: '/#packages' },
+    { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Contact Us', href: '/#contact' },
   ]
 
   return (
@@ -42,7 +42,7 @@ export default function Navbar({ siteSettings }: { siteSettings?: any }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-purple-600 font-medium transition-colors"
               >
                 {item.label}
               </Link>
@@ -50,7 +50,7 @@ export default function Navbar({ siteSettings }: { siteSettings?: any }) {
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:block btn-primary text-sm">Get Started</button>
+          <Link href="/#contact" className="hidden md:block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all text-sm">Get Started</Link>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -70,7 +70,7 @@ export default function Navbar({ siteSettings }: { siteSettings?: any }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                className="block px-4 py-2 text-gray-700 hover:bg-purple-50"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
