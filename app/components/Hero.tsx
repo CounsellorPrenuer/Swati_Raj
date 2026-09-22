@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { urlFor } from '@/lib/sanity.client'
 
 export default function Hero({ founder }: { siteSettings?: any; founder?: any }) {
-  
+  const headlineParts = ['Helping Students Find Their Way', '— One Clear Decision at a Time']
   const description = 'Certified career counseling for students in classes 8–12, guiding them from confusion to clarity in choosing subjects, streams, and career paths.'
   const founderName = founder?.name || 'Swati Raj'
   const founderHeadline = founder?.headline || 'Career & Admission Guidance Specialist'
@@ -16,7 +16,7 @@ export default function Hero({ founder }: { siteSettings?: any; founder?: any })
           {/* Left Side - Text */}
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Helping Students Find Their Way — <br/><span className="text-gradient">One Clear Decision at a Time</span>
+              {headlineParts[0]} <br/><span className="text-gradient">{headlineParts[1]}</span>
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               {description}
